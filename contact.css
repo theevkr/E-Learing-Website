@@ -1,0 +1,132 @@
+.contact-container{
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto;
+    border-radius: 1rem ;
+}
+.contact-aside{
+    background: var(--color-bg);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 8rem;
+}
+.aside-image{
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+.contact-aside h2{
+    text-align: left;
+    color: white;
+    margin-bottom: 1rem;
+}
+.contact-aside p{
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+.contact-details li{
+    display: flex;
+    gap: 1rem;
+    color: white;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.contact-socials{
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+.contact-socials a{
+    background: var(--color-white);
+    color:var(--color-bg1);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    transition: all 0.5s ease;
+
+}
+.contact-socials a:hover{
+    background: var(--color-bg1);
+    color: white;
+}
+/* form */
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+.form-name{
+    display: flex;
+    gap: 1.2rem;
+}
+.contact-form input[type='text']{
+    width: 50%;
+}
+.contact-form input,textarea{
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: white;
+    
+}
+.contact-form .btn{
+    width: max-content;
+    background:#00bf8e;
+    cursor: pointer;
+}
+.contact-form input::placeholder{
+    color: rgb(210, 201, 201);
+}
+.contact-form textarea::placeholder{
+    color: rgb(210, 201, 201);
+}
+.contact-form .btn:hover{
+    transform: scale(.9,.9);
+}
+/* media queries */
+@media screen and (max-width:1024px){
+    .contact{
+        padding-bottom: 0;
+    }
+    .contact-container{
+        gap: 1.5rem;
+        margin-top:3rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+    .contact-aside{
+        width: auto;
+        padding: 1.3rem;
+        bottom: 0;
+    }
+    .contact-form{
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+    .contact-socials{
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width:600px){
+    .contact-container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 1rem;
+        padding: 0;
+    }
+    .contact-form{
+        margin: 0 1.5rem 3rem;
+    }
+    .form-name{
+        flex-direction: column;
+    }
+    .form-name input[type='text']{
+        width: 100%;
+    }
+
+}

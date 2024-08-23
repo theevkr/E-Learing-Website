@@ -1,0 +1,651 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root{
+    --color-primary:#6c63ff;
+    --color-success:#00bf8e;
+    --color-warning:#f7c94b;
+    --color-danger:#f75842;
+    --color-danger-variant:rgba(247,88,66,0.4);
+    --color-white:#fff;
+    --color-light:rgba(255,255,255,0.7);
+    --color-black:#000;
+    --color-bg:#1f2641;
+    --color-bg1:#2e3267;
+    --color-bg2:#424890;
+    --container-width-lg:90%;
+    --container-width-md:94%;
+    --container-width-sm:94%;
+    --transition:all 0.4s ease;
+}
+body{
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    /* color: var(--color-white);
+    background: var(--color-bg); */
+}
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+section{
+    padding: 6rem 0;
+    /* 1rem = 16px */
+}
+section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+h1,h2,h3,h4,h5{
+    line-height: 1.2;
+}
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+a{
+    color: var(--color-white);
+}
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.btn{
+    display: inline-block;
+    background: var(--color-bg2);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+    border-radius: 4px;
+}
+.btn:hover{
+    background: var(--color-success);
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+.btn-primary{
+    background: var(--color-bg2);
+    color: var(--color-white);
+}
+/* ==============================navbar=========================== */
+nav{
+    background: var(--color-bg);
+    width: 100vw;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    transition: all .5s ease;
+    box-shadow:.1rem .1rem 1rem #1f2641,
+                -.1rem -.1rem .1rem #1f2641;
+    
+}
+/* change navbar style on scrollling */
+.window-scroll{
+    background: var(--color-bg);
+    box-shadow: none;
+}
+
+.window-scroll a{
+    color: white;
+}
+.window-scroll .nav-menu a:hover{
+    color: var(--color-bg);
+    background: var(--color-white);
+}
+/* =============end========== */
+.nav-container{
+    height: 100%;
+    /* it means 100% height of its parent that is 5rem means 80px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav-container h4{
+    font-size: 1.5rem;
+}
+.head{
+    color: white;
+}
+nav button{
+    display: none;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-menu a{
+    font-size: 1rem;
+    transition: all 0.5s ease;
+    padding: 0.5rem .8rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    
+}
+.nav-menu a:hover{
+    color: #1f2641;
+    background: var(--color-white);
+}
+/* =============================header section starts=================== */
+header{
+    position: relative;
+    top: 4rem;
+    height: 80vh;
+    overflow: hidden;
+    margin-bottom: 10rem;
+}
+.header-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 1fr 1fr means both 50%  */
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+    margin-top: 2rem;
+}
+.header-left h1{
+    color: var(--color-bg1);
+    font-size: 2rem;
+    text-align: justify;
+}
+.header-left p{
+    margin: 1rem 0 2.4rem;
+    text-align: justify;
+}
+.header-left span{
+    color: var(--color-bg2);
+    font-weight: 600;
+}
+/* ==============================categories============================= */
+ .categories{
+    padding: 3rem 0;
+} 
+.categories h1{
+    line-height: 1;
+    margin-bottom: 3rem;
+    color: var(--color-bg1);
+}
+.categories-container{
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap:10%;
+}
+.categories-left p{
+    margin: 1rem 0 3rem;
+    text-align: justify;
+}
+
+.categories-right{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.category{
+    background: var(--color-bg2);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.category:hover{
+    transform:scale(0.95,0.95);
+    /* box-shadow: 1rem 1rem 1rem rgba(103, 66, 189, 0.5); */
+    z-index: 1;
+}
+.category-icon img{
+    width: 45px;
+}
+.category h5{
+    margin: .5rem 0 .5rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.category p{
+    font-size: 0.8rem;
+    text-align: start;
+    color: #fff;
+}
+/* ==================category section end======================= */
+
+.courses{
+    padding: 2rem 0;
+    margin-top: .5rem;
+}
+.courses h2{
+    color: #2e3267;
+}
+.courses-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.course{
+    /* height: fit-content; */
+    background: var(--color-white);
+    text-align: center;
+    border: 1px solid transparent;
+    border: 2px solid var(--color-bg);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.exp{
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 3rem;
+}
+.explore{
+    background: var(--color-bg2);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+    border-radius: 4px;
+}
+.explore:hover{
+    font-size: 1rem;
+    background: none;
+    color: #2e3267;
+    transform: scale(1.1,1.1);
+
+}
+.course:hover{
+    box-shadow:.5rem .5rem 1rem #ccc,
+                -1rem -1rem 1rem #fff;
+    transform: scale(0.97,0.97);
+}
+.course-info{
+    padding: 1rem;
+    color: var(--color-bg2);
+}
+.course-info h4{
+    font-size: 1rem;
+}
+.course-info p{
+    margin: 1rem 0 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--color-bg1);
+    text-align: center;
+}
+/* ===============================faq======================= */
+.faqs{
+    padding: 2rem 0 5rem;
+}
+.faqs h2{
+    color: #2e3267;
+}
+.faqs-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem ;
+}
+
+.faq{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    background: var(--color-bg1);
+    height: fit-content;
+    cursor: pointer;
+    transition: all 1s ease;
+    border-radius: 3px;
+    
+}
+.faq:hover{
+    background: var(--color-success);
+}
+.faq h4{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: white;
+}
+.faq-icon{
+    align-self: flex-start;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.faq p{
+    color: #fff;
+    margin-top: .8rem;
+    font-size: .8rem;
+    display: none;
+}
+.faq-open p{
+    display: block;
+}
+/* ====================end of faq=========================== */
+
+/* ===================testimonial section================ */
+.testimonial-container{
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+.testimonial-container h2{
+    margin-bottom: 2rem;
+    color: #2e3267;
+}
+.testimonial{
+    padding: 2rem;
+}
+.avatar{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: .5rem solid var(--color-bg);
+}
+.testimonial-info{
+    text-align: center;
+    
+}
+.testimonial-info h5{
+    color: #2e3267;
+    font-size: 1.3rem;
+}
+.testimonial-info small{
+    font-size: .9rem;
+    font-weight: bold;
+}
+.testimonial-body{
+    background: var(--color-bg1);
+    padding: 2rem;
+    margin-top: 3rem;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.testimonial-body p{
+    color: #fff;
+    font-size: .8rem;
+    text-align: justify;
+}
+/* this is for triangle shape */
+.testimonial-body::before{
+    content: "";
+    display: block;
+    /* background:linear-gradient(135deg,transparent,var(--color-bg1),var(--color-bg1)); */
+    background: var(--color-bg1);
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 45%;
+    top: -1.5rem;
+    transform: rotate(45deg);
+}
+/* ========================footer section starts======================== */
+footer{
+    background:var(--color-bg1);
+    padding-top: 4rem;
+    font-size: 0.9rem;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5rem;
+}
+.footer-container >div h4{
+    margin-bottom: 1.2rem;
+    color: #fff;
+}
+.footer-1 p{
+    margin: 0 0 2rem;
+    color: #fff;
+}
+footer ul li{
+    margin-bottom: 0.7rem;
+    transition: all 0.7s ease;
+}
+.footer-2 ul li:hover{
+    transform: scale(1.1,1.1);
+}
+.footer-3 ul li:hover{
+    transform: scale(1.1,1.1);
+}
+.footer-social{
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+.footer-social .uil{
+    color: #1f2641;
+    background: var(--color-white);
+    padding: .5rem;
+    border-radius: 100%;
+    transition: all 0.7s ease;
+}
+.footer-social .uil:hover{
+    background: #1f2641;
+    color: white;
+    
+}
+.footer-4 p{
+    color: #fff;
+    margin-bottom: .5rem;
+}
+.footer-copyright{
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid white;
+    font-size: 1.1rem;
+}
+/* =============media queries for tablet ================*/
+@media screen and (max-width:1024px){
+    .container{
+        width: var(--container-width-md);
+    }
+    .header-left h1{
+        text-align: start;
+        font-size: 1.5rem;
+    }
+    .header-left p{
+        font-size: .8rem;
+    }
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    nav button{
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+        margin-right: 1rem;
+    }
+   
+
+    nav button#close-menu-button{
+        display: none;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 4rem;
+        right: 2%;
+        flex-direction: column;
+        gap: 0;
+        height: fit-content;
+        width: 18rem;
+        display:none;
+    }
+    .nav-menu li{
+        width: 100%;
+        height: 5rem;
+        animation: animatenavitem .7s linear forwards;
+        transform-origin: top;
+    }
+    @keyframes animatenavitem{
+        0%{
+            transform: rotateX(90deg);
+        }
+        100%{
+            transform: rotateX(0deg);
+        }
+    }
+    .nav-menu li a{
+        background: var(--color-bg);
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        transition: all .5s ease;
+    }
+    .nav-menu li a:hover{
+        background: var(--color-bg2);
+        color: white;
+    }
+    /* header */
+    header{
+        height: 40vh;
+        margin-bottom: 4rem;
+    }
+    .header-container{
+        gap: 0;
+        padding-bottom: 4rem;
+    }
+    /* categories section */
+    .categories{
+        height: auto;
+    }
+    .categories-container{
+
+        grid-template-columns:1fr;
+        gap: 3rem;
+    }
+    .categories-left{
+        margin-right: 0;
+    }
+    .categories-left p{
+        font-size: 1rem;
+    }
+    /* courses section */
+    .courses{
+        margin-top: 0;
+    }
+    .courses-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    /* testimonial section */
+    .testimonial-body p{
+        text-align: center;
+    }
+    .testimonial-body{
+        padding: 2rem 1rem ;
+    }
+    .testimonial-body::before{
+        left: 40%;
+    }
+    /* faq section */
+    .faqs-container{
+        grid-template-columns: 1fr;
+    }
+    .faq{
+        padding: 1.2rem;
+    }
+    /* footer */
+    .footer-container{
+        grid-template-columns: 1fr 1fr;
+        padding-left: 2rem;
+    }
+}
+/* media queries for phone */
+@media screen and (max-width:600px){
+
+    
+    .container{
+        width: var(--container-width-sm);
+    }
+    .nav-menu{
+        right: 2%;
+    }
+    header{
+        height: 100vh;
+    }
+    .header-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    .header-left p{
+        margin-bottom: 1.5rem;
+    }
+    /* categories */
+    .categories{
+        padding: 0 0 2rem;
+    }
+    .categories-right{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .category{
+        padding: 1rem;
+        border-radius: .8rem;
+    }
+    /* course */
+    .courses{
+        padding: 0;
+    }
+    .courses-container{
+        grid-template-columns: 1fr;
+    }
+    /* testimonial */
+    /* faqs */
+    .faqs{
+        padding-top: 0;
+    }
+    /* footer */
+    .footer-container{
+        padding-left: 0;
+        margin: auto;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    .footer-1 p{
+        margin: 1rem auto;
+    }
+    .footer-social{
+        justify-content: center;
+    }
+}
